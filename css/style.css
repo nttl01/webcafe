@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+/* 스타일 초기화 */
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+}
+
+.header, .visual, .main, .slogan, .footer {
+  background: #ff0;
+  width: 940px;
+  margin: 0 auto;
+}
+
+.bg-footer{
+  background: blue;
+}
+
+/* 헤더 */
+.header{
+  position: relative;
+  background: pink;
+}
+
+/* 로고 */
+.logo{
+  background: blue;
+  position: absolute;
+  top: 45px;
+  left: 65px;
+
+}
+
+/* 비주얼 */
+.visual {
+  height: 120px;
+}
+
+/* 메인 콘텐츠 */
+.main{
+  background: lime;
+  min-height: 450px;
+  display:flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.group1{
+  background: pink;
+  width:250px;  
+}
+
+.group2{
+  background: pink;
+  width:380px;
+}
+
+.group3{
+  background: pink;
+  width:190px;
+}
