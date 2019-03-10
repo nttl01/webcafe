@@ -1,61 +1,111 @@
 @charset "utf-8";
-
 /* 스타일 초기화 */
 *, *::before, *::after{
+  box-sizing: border-box; /* 사이즈를 계산할때 패딩값을 함께 처리한다는 뜻 */
   margin: 0;
   padding: 0;
 }
-
-.header, .visual, .main, .slogan, .footer {
-  background: #ff0;
-  width: 940px;
-  margin: 0 auto;
+html{
+  font-size: 10px;
 }
-
-.bg-footer{
-  background: blue;
+ul{
+  list-style-type: none ;
 }
+a{
+  text-decoration: none;
+  color: inherit;  /* 부모로부터 상속받은 칼라를 쓰라는 뜻 여기서는 body꺼를 받는다.*/
+}
+/* 숨긴컨텐츠 */
+.readable-hidden{
+  position: absolute;  /* 보이지는 않지만 스크린리더는 읽음  margin까지 안보이게 처리 */
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  clip:rext(0,0,0,0);
+  margin: -1px;    /*   clip 안되는 브라우저 있어 사용함 */
 
+}
+/*   기본스타일 */
+body{
+  color:#181818;
+  font-size: 1.4rem; /* rem은 무조건 루트를 기준으로 계산한다는뜻 반응형에서 화면사이즈에 맞게 자동으로 처리한다. */
+  }
+/* 컨테이너 */
+.container{
+  background: linear-gradient(to bottom, #ccc, #eee 45%, #fff 70%, #fff 100%)
+}
+.header, .visual, .main, .slogan, .footer{
+  width: 940px; 
+  margin:0 auto;
+}
 /* 헤더 */
 .header{
   position: relative;
-  background: pink;
+  background: #fff;
+  padding: 0 30px 45px;
+  border-radius:0 0 15px 15px; 
 }
-
 /* 로고 */
 .logo{
-  background: blue;
   position: absolute;
   top: 45px;
-  left: 65px;
-
+  left:65px;
 }
-
-/* 비주얼 */
-.visual {
+/* 안내링크 */
+.member{
+  text-align: right;    /* 메뉴 오른쪽을 정렬   ㅣfloat 와 같은 효과 */
+  font-size: 0;  /* 메뉴간격 0*/
+  padding: 0 2px 0;
+  margin-right: -10px;
+}
+.member li, .member a{
+  display: inline-block;
+}
+.member li{
+  display: inline-block;/* 박스가로배치 메뉴가 옆으로 위치 float left와 같은 효과*/
+  font-size: 1.4rem;
+  text-transform: uppercase; /* 소문자를 대문자로 변경*/
+}
+.bar::before{ /* bar class 앞에만 적용하겠다는 뜻 */
+  content: ":";
+  margin: 0 1px; /* 콜론 좌우에 공백을 처리한다.*/
+}
+.member a{
+  padding: 5px 10px;  /* 터치(클릭) 영역을 크게 하기 위해서 a링크 테그에 면적을 할당한다. */
+  display: inline-block;
+}
+.bg-footer{
+ background: red
+}
+/* 메인 메뉴 */
+.menu{
+  background: linear-gradient(to bottom, #e8852e 0%,#ed552f 35%,#ed552f 70%,#e8852e 100%);/* linear 앞에 red 적으면 linear 지원안할때 빵강배경보임배경색 글라데이션*/
+  padding: 0 30px ;
+  margin-top: 10px;
+}
+/*  비주얼 */
+.visual{
   height: 120px;
-}
-
-/* 메인 콘텐츠 */
+  }
+  /* 메인 콘텐츠   */
 .main{
   background: lime;
-  min-height: 450px;
-  display:flex;
+  height:450px;
+  display: flex;
   justify-content: space-evenly;
   flex-direction: row;
 }
-
 .group1{
   background: pink;
-  width:250px;  
+  width: 250px;
 }
-
 .group2{
   background: pink;
-  width:380px;
+  width: 380px;
+  
 }
-
 .group3{
   background: pink;
-  width:190px;
+  width: 100px;
 }
+
