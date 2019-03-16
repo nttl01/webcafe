@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
 /* 스타일 초기화 */
 *, *::before, *::after{
   box-sizing: border-box; /* 사이즈를 계산할때 패딩값을 함께 처리한다는 뜻 */
@@ -23,12 +24,24 @@ a{
   overflow:hidden;
   clip:rext(0,0,0,0);
   margin: -1px;    /*   clip 안되는 브라우저 있어 사용함 */
-
 }
+/* 클래스 모듈 */
+/* float 이슈를 해결하기 위한 clear 기능 */
+.clearfix::after{ /* 마지막에 가까 요소를 만들어준다.*/
+  content: "";
+  display: block;  /* after는 인라인 요소이므로 clear가 안된다 그러므로 블럭박스로 속성을 변경한다.*/
+  clear: both;
+ }
+ 
+
 /*   기본스타일 */
 body{
   color:#181818;
   font-size: 1.4rem; /* rem은 무조건 루트를 기준으로 계산한다는뜻 반응형에서 화면사이즈에 맞게 자동으로 처리한다. */
+  font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+  font-weight: 400;
+  line-height: 1.15;
+  background: #fff;
   }
 /* 컨테이너 */
 .container{
@@ -82,7 +95,28 @@ body{
   background: linear-gradient(to bottom, #e8852e 0%,#ed552f 35%,#ed552f 70%,#e8852e 100%);/* linear 앞에 red 적으면 linear 지원안할때 빵강배경보임배경색 글라데이션*/
   padding: 0 30px ;
   margin-top: 10px;
+  padding-left: 225px;
 }
+
+.menu > li{
+  float: left;
+}
+.menu-item-text{
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #fff;
+  padding:1em 18px; /* 위아래 여백을 준다*/
+  display: block;
+  border-left: 1ps, solid, #fff;
+  
+
+}
+.sub-menu{
+  background: yellow;
+  position: absolute;
+  display: none;
+}
+
 /*  비주얼 */
 .visual{
   height: 120px;
