@@ -1,5 +1,7 @@
 @charset "utf-8";
 @import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+@import url("fontello.css");
+
 /* 스타일 초기화 */
 *, *::before, *::after{
   box-sizing: border-box; /* 사이즈를 계산할때 패딩값을 함께 처리한다는 뜻 */
@@ -16,6 +18,7 @@ a{
   text-decoration: none;
   color: inherit;  /* 부모로부터 상속받은 칼라를 쓰라는 뜻 여기서는 body꺼를 받는다.*/
 }
+
 /* 숨긴컨텐츠 */
 .readable-hidden{
   position: absolute;  /* 보이지는 않지만 스크린리더는 읽음  margin까지 안보이게 처리 */
@@ -32,7 +35,6 @@ a{
   display: block;  /* after는 인라인 요소이므로 clear가 안된다 그러므로 블럭박스로 속성을 변경한다.*/
   clear: both;
  }
- 
 
 /*   기본스타일 */
 body{
@@ -43,6 +45,7 @@ body{
   line-height: 1.15;
   background: #fff;
   }
+
 /* 컨테이너 */
 .container{
   background: linear-gradient(to bottom, #ccc, #eee 45%, #fff 70%, #fff 100%)
@@ -51,6 +54,7 @@ body{
   width: 940px; 
   margin:0 auto;
 }
+
 /* 헤더 */
 .header{
   position: relative;
@@ -58,12 +62,14 @@ body{
   padding: 0 30px 45px;
   border-radius:0 0 15px 15px; 
 }
+
 /* 로고 */
 .logo{
   position: absolute;
-  top: 45px;
+  top: 50px;
   left:65px;
 }
+
 /* 안내링크 */
 .member{
   text-align: right;    /* 메뉴 오른쪽을 정렬   ㅣfloat 와 같은 효과 */
@@ -90,38 +96,90 @@ body{
 .bg-footer{
  background: red
 }
+
 /* 메인 메뉴 */
 .menu{
   background: linear-gradient(to bottom, #e8852e 0%,#ed552f 35%,#ed552f 70%,#e8852e 100%);/* linear 앞에 red 적으면 linear 지원안할때 빵강배경보임배경색 글라데이션*/
-  padding: 0 30px ;
   margin-top: 10px;
   padding-left: 225px;
+  border-top: 2px solid #000;
+  border-radius: 0 0 5px 5px;
 }
-
 .menu > li{
   float: left;
+  position: relative;
 }
 .menu-item-text{
   font-size: 1.7rem;
   font-weight: 700;
   color: #fff;
-  padding:1em 18px; /* 위아래 여백을 준다*/
+  padding: 1em 18px; /* 위아래 여백을 준다*/
   display: block;
-  border-left: 1ps, solid, #fff;
-  
-
+  border-left: 1px solid #fff;
+  text-shadow: 1px 0px 0 #000,0px 1px 0 #000,-1px 0px 0 #000,0px -1px 0 #000;
+}
+.menu-act .menu-item-text{
+  color: #ff0;
+  position: relative;
+}
+.menu-act .menu-item-text::after{
+  width: calc(100% - 36px);
+  bottom: -2px;
+  content: "";
+  display: block;
+  position: absolute;  
+  border-top: 2px solid #000;
 }
 .sub-menu{
-  background: yellow;
   position: absolute;
+  white-space: nowrap;
+  top: 55px;
   display: none;
+}
+.menu-act .sub-menu{
+  display: block;
+}
+.sub-menu1, .sub-menu2, .sub-menu3{
+  left: 0;
+}
+.sub-menu4, .sub-menu5, .sub-menu6{
+  right: 0;
+}
+.sub-menu li, .sub-menu a{
+  display: inline-block;
+}
+.sub-menu a{
+  padding: 10px 0;
+  margin-right: 0 10px;
 }
 
 /*  비주얼 */
 .visual{
   height: 120px;
+}
+@keyframes textAni{
+  0%{
+    font-size: 12px;  
+    color: rgba(0,0,0,0);
+    transform: translate(0,0);
+
   }
-  /* 메인 콘텐츠   */
+  100%{
+    font-size: 24px;
+    color: rgba(0,0,0,1);
+    transform: translate(400px,75px);
+  }
+}
+.visual-text{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  animation-name: textAni;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  background:  yellow;
+  width: 545px;
+}
+
+/* 메인 콘텐츠   */
 .main{
   background: lime;
   height:450px;
