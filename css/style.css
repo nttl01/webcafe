@@ -201,7 +201,7 @@ body{
   background-image: url("images/ani_flower_03.png"), url("images/ani_flower_04.png");
   background-position: 300px 0, 800px 0;
   animation-delay: 1s;
-  
+  animation-timing-function: ease-in-out;
 }
 .visual-text{
   font-family: Georgia, 'Times New Roman', Times, serif;
