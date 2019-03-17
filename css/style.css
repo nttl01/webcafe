@@ -236,6 +236,7 @@ body{
   background: #e8852e radial-gradient(circle at right top, #e8852e, #ed552f);
   border-radius: 5px;
   padding: 10px;
+  box-shadow: 5px 5px 0 0 #aaa;
 
 }
 .login-heading{
@@ -294,7 +295,24 @@ body{
 .sign .icon-right-open::before{
   color: #ed552f;
   margin: 0;
-
 }
 
+/* 유효성검사 배너*/
+.validation{
+  margin-top: 25px;
+}
+.validation-list a{
+  display: block;   /* 링크를 전체 면적에 주기 위해서 변형 */
+  background:  url("images/validation_icon.png") no-repeat 20px 50%, linear-gradient(180deg, #bbb, #eee) ;
+   /* 맨마지막 앞에 폴백 칼라를 선언한다. 또는 아래처럼 한번더 선언한다.*/
+  background-color: #bbb;
+  border-radius: 30px;
+  border: 1px solid #aaa;
+  padding: 8px 15px 8px 45px;
+  margin: 10px 0;
+}
+.validation-list a:hover,
+.validation-list a:focus{
+  color: rgb(255,0,0);
+}
 
