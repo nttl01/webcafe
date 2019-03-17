@@ -316,3 +316,45 @@ body{
   color: rgb(255,0,0);
 }
 
+/* 웹관련용어 */
+.term{
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background: #bbb linear-gradient(to bottom, #bbb, #eee);
+  padding: 10px 15px;
+}
+.term-heading{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.term-list > div{
+  margin-top: 10px;
+}
+.term-list-subject, .term-list-brief{
+  width: 145px;
+  float: right;
+}
+.term-list-subject{
+  color: #296897;
+}
+.term-list-thumbnail {
+  float:left;
+}
+.term-list-thumbnail img{
+  vertical-align: middle;
+}
+.term-list-brief{
+  margin-top: 5px;
+  line-height: 1.5rem;
+}
+
+.even .term-list-subject, .even .term-list-brief{
+  width: 145px;
+  float: left;
+}
+.even .term-list-thumbnail{
+  float:right;
+}
+
+
