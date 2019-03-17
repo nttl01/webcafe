@@ -25,7 +25,7 @@ a{
   width:1px;
   height:1px;
   overflow:hidden;
-  clip:rext(0,0,0,0);
+  clip: rext(0,0,0,0);
   margin: -1px;    /*   clip 안되는 브라우저 있어 사용함 */
 }
 /* 클래스 모듈 */
