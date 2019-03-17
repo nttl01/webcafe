@@ -20,12 +20,12 @@ a{
 }
 
 /* 숨긴컨텐츠 */
-.readable-hidden{
+.readable-hidden, legend{
   position: absolute;  /* 보이지는 않지만 스크린리더는 읽음  margin까지 안보이게 처리 */
   width:1px;
   height:1px;
   overflow:hidden;
-  clip: rext(0,0,0,0);
+  clip: rect(0,0,0,0);
   margin: -1px;    /*   clip 안되는 브라우저 있어 사용함 */
 }
 /* 클래스 모듈 */
@@ -150,7 +150,7 @@ body{
 }
 .sub-menu a{
   padding: 10px 0;
-  margin-right: 0 10px;
+  margin-right: 10px;
 }
 
 /*  비주얼 */
@@ -159,7 +159,6 @@ body{
     font-size: 12px;  
     color: rgba(0,0,0,0);
     transform: translate(0,0);
-
   }
   100%{
     font-size: 24px;
@@ -213,23 +212,89 @@ body{
 
 /* 메인 콘텐츠   */
 .main{
-  background: lime;
+  background: #fff;
+  padding: 30px;
   height:450px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-direction: row;
+  border-radius: 15px 15px 0 0;
 }
 .group1{
-  background: pink;
   width: 250px;
 }
 .group2{
-  background: pink;
   width: 380px;
   
 }
 .group3{
-  background: pink;
   width: 100px;
 }
+
+/* 로그인  */
+.login{
+  background: #e8852e radial-gradient(circle at right top, #e8852e, #ed552f);
+  border-radius: 5px;
+  padding: 10px;
+
+}
+.login-heading{
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff0;
+  padding-left: 10px;
+}
+.login-form{
+  background: rgb(255,255,255);
+  margin-top: 10px;
+  padding: 10px 10px 0 10px;
+  border-radius: 5px 5px 0 0;
+}
+.login fieldset{
+  border: 0px;
+  position: relative;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 10px;
+}
+.login-form label{
+  display: inline-block;
+  width: 4em;
+}
+.login-form input{
+  width: 95px;
+  height: 24px;
+  border: 1px solid #aaa;
+  padding: 1px 1px 1px 5px;
+}
+.user-pw{
+  margin-top: 5px;
+}
+.btn-login{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ed552f;
+  color: rgb(255,255,255);
+  border-radius: 3px;
+  border: 0;
+  padding: 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 50px;
+  height: 54px;
+}
+.sign{
+  background: rgb(255,255,255);
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 1.3rem;
+}
+.sign .icon-right-open::before{
+  color: #ed552f;
+  margin: 0;
+
+}
+
 
