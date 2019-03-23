@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>웹카페 Web Cafe</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery.min.js" defer></script>
+  <script src="js/webcafe.js" defer></script>
 </head>
 <body>
   <div class="container">
@@ -28,13 +30,13 @@
             <span class="menu-item-text">HTML에 대해</span>
             <ul class="sub-menu sub-menu1">
               <li>
-                <a class="icon-dot-circled" href="#">HTML5 소개</a>
+                <a href="#">HTML5 소개</a>
               </li>
               <li>
-                <a class="icon-dot-circled" href="#">레퍼런스 소개</a>
+                <a href="#">레퍼런스 소개</a>
               </li>
               <li>
-                <a class="icon-dot-circled" href="#">활용예제</a>
+                <a href="#">활용예제</a>
               </li>
             </ul>
           </li>
@@ -206,6 +208,65 @@
             </fieldset>
           </form>
         </section>
+
+        <div class="board">
+          <section class="notice board-act">
+            <h2 class="tab notice-heading" tabindex="0" id="notice">공지사항</h2>
+            <ul class="notice-list">
+              <li>
+                <a href="#">HTML의 모든 것을 알려주마 샘플 활용법</a>
+                <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+              </li>
+              <li>
+                <a href="#">W3C 사이트 리뉴얼 및 공지사항</a>
+                <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+              </li>
+              <li>
+                <a href="#">KWCAG 2.1 소식</a>
+                <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+              </li>
+              <li>
+                <a href="#">서버 점검으로 인한 사이트 이용안내 입니다.</a>
+                <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+              </li>
+              <li>
+                <a href="#">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a>
+                <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+              </li>
+            </ul>
+            <a href="#" class="icon-plus notice-more" title="공지사항" aria-labelledby="notice">더보기</a>
+          </section>
+
+          <section class="pds">
+            <h2 class="tab pds-heading" id="pds" tabindex="0">자료실</h2>
+            <ul class="pds-list">
+              <li>
+                <a href="#">디자인 사이트 링크 모음</a>
+                <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+              </li>
+              <li>
+                <a href="#">웹 접근성 관련 자료 모음</a>
+                <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+              </li>
+              <li>
+                <a href="#">예제 샘플 응용해보기</a>
+                <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+              </li>
+              <li>
+                <a href="#">웹 접근성 향상을위한 국가 표준 기술 가이드라인</a>
+                <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+              </li>
+              <li>
+                <a href="#">로얄티 프리 이미지 자료</a>
+                <time datetime="2018-05-31T13:53:45">2018.05.31</time>
+              </li>
+            </ul>
+            <a href="#" class="icon-plus pds-more" title="자료실" aria-labelledby="pds">더보기</a>
+
+
+          </section>
+        </div>
+
       </div>
       <div class="group group3">그룹3</div>
     </main>
