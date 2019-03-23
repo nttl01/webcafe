@@ -413,8 +413,7 @@ body{
   font-weight:400; 
   padding: 8px 15px;
   cursor: pointer;
-  outline: 0;
-
+  /* outline: 0; */
 }
 .board-act .tab{
   background: #fff;
@@ -458,7 +457,68 @@ body{
   
 }
 
+/* 새소식 */
+.news{
+  position: relative;
+  margin-top: 20px;
 
+}
+.news::before{
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 80%;
+  height: 2px;
+  background: #aaa linear-gradient(to right, #aaa, #fff);
+}
+.news-heading{
+  font-size: 1.5rem;
+  color: #ed552f;
+
+}
+.news-link{
+  display: block;
+  margin-top: 35px;
+
+}
+.news-item{
+  position: relative;
+  padding-left: 130px;
+
+}
+.news-item h3{
+  font-size: 1.4rem;
+
+}
+.news-item time{
+  display: block;
+  margin-top: 5px;
+
+}
+.news-item p{
+  margin-top: 10px;
+  line-height: 1.5;
+
+}
+.news-item-thumbnail{
+  position: absolute;
+  top: 3px;
+  left: 0;
+  text-align: center;
+
+}
+.news-item-thumbnail img{
+  box-shadow: 0 15px 15px 0 #ccc;
+  margin-bottom: 15px;
+}
+.news-more{
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+
+}
 
 
 
