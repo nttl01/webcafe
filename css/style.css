@@ -36,6 +36,13 @@ a{
   clear: both;
  }
 
+ /* 아이콘 폰트 색상 */
+.icon-plus::before{
+  color: hsla(110, 70%,30%, 1);
+
+}
+
+
 /*   기본스타일 */
 body{
   color:#181818;
@@ -108,6 +115,7 @@ body{
 .menu > li{
   float: left;
   position: relative;
+  outline: 0;
 }
 .menu-item-text{
   font-size: 1.7rem;
@@ -322,6 +330,7 @@ body{
   border-radius: 5px;
   background: #bbb linear-gradient(to bottom, #bbb, #eee);
   padding: 10px 15px;
+  margin-top: 20px;
 }
 .term-heading{
   font-size: 1.5rem;
@@ -386,6 +395,132 @@ body{
   height: 24px;
   border-radius: 3px;
 }
+
+
+/* 공지사항 및 자료실 */
+.board{
+  margin-top: 20px;
+  position: relative;
+}
+.tab{
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+  position: absolute;
+  top:0;
+  border: 1px solid #aaa;
+  border-radius:5px 5px 0 0;
+  color:#666;
+  font-size:1.4rem;
+  font-weight:400; 
+  padding: 8px 15px;
+  cursor: pointer;
+  outline: 0;
+
+}
+.board-act .tab{
+  background: #fff;
+  color:#ed552f;
+  border-color:#ed552f #ed552f #fff #ed552f;
+}
+.notice-heading{
+  left: 0;
+}
+.pds-heading{
+  left:83px;
+}
+.board ul, .board a[class$="more"]{
+ display:none;
+}
+.board-act ul, .board-act a[class$="more"]{   /*활성화될때만 보임*/
+  display: block !important;
+}
+.board-act ul{
+  padding-top:45px; 
+}
+.board-act li{
+  display: flex;
+  margin: 10px 0;
+}
+.board-act ul a{
+  width: 280px;
+  /* 말 줄임표 3개를 세트로 사용함 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.board-act time{
+  margin-left: auto;
+}
+.board-act a[class$="more"]{
+  position: absolute;
+  top:-8px;
+  right:-8px;
+  padding: 8px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 공지사항 및 자료실 */ /*
+.board{
+  margin-top: 20px;
+  position: relative;
+}
+.tab{
+  background: #ccc linear-gradient( to bottom, #ccc, #eee);
+  position: absolute;
+  top: 0;
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0 ;
+  color: #666;
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 8px 15px;
+}
+.board-act .tab{
+  background: #fff;
+  color: #ed55ef;
+  border-color: #ed552f #ed552f #fff #ed552f;
+}
+.notice-heading{
+  left:0;
+}
+.pds-heading{
+  left:83px;
+}
+.board ul, .board a[class$="more"]{
+  background:skyblue;
+  display: none;
+}
+.board-act ul, .board-act a[class$="more"]{
+  display: block !important;
+}
+.board-act ul{
+  padding-top: 45px;
+}
+.board-act  a[class$="more"]{
+  position: absolute;
+  top: -8;
+  right: -8;
+  padding: 8px;
+}
+*/
+
+
+
 
 
 
